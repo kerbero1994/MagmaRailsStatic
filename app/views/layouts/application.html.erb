@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>StaticPages</title>
+        <%= csrf_meta_tags %>
+        <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' %>
+        <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' %>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Web Developer</a>
+                    <img src="https://cdn.codementor.io/assets/topic/category_header/ruby-on-rails-bc9ab2af8d92eb4e7eb3211d548a09ad.png" class="logo">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><%= link_to "Sport", aboutsport_index_path%></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><%= link_to "Band", about_band_index_path%></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><%= link_to "About Me", about_y_index_path%></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><%= link_to "Home", home_path%></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </nav>
+        <div class="container">
+            <%= yield %>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <a href='https://www.facebook.com/eduglezzvl94'>
+                    <i class="fa fa-facebook fa-2x fa-fw"></i>
+                </a>
+                <a href='https://twitter.com/eduglezzvl'>
+                    <i class="fa fa-twitter fa-2x fa-fw"></i>
+                </a>
+                <a href='https://www.linkedin.com/in/eduardo-gonz%C3%A1lez-zavala-5b9201124/'>
+                    <i class="fa fa-linkedin fa-2x fa-fw"></i>
+                </a>
+                <a href="https://plus.google.com/u/0/108592749221625553290">
+                    <i class="fa fa-google-plus fa-2x fa-fw"></i>
+                </a>
+                <a href="https://github.com/kerbero1994">
+                    <i class="fa fa-github fa-2x fa-fw"></i>
+                </a>
+            </span>
+        </div>
+    </footer>
+</body>
+</html>
